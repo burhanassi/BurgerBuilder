@@ -10,7 +10,7 @@ const burger = (props) => {
     }).reduce((arr, el) => {
         return arr.concat(el)
     }, []);
-    console.log(transIng)
+    // console.log(transIng)
     if (transIng.length === 0){
         transIng = <p>Please Add Some Ingredients!</p>;
     }
