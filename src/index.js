@@ -4,13 +4,15 @@ import './index.css';
 import App from './App';
 import {BrowserRouter} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
-import { createStore, applyMiddleware, compose, combineReducers} from 'redux';
-import { Provider } from 'react-redux';
+import {createStore, applyMiddleware, compose, combineReducers} from 'redux';
+import {Provider} from 'react-redux';
 import burgerBuilderReducer from "./store/reducers/burgerBuilder";
 import orderReducer from './store/reducers/order';
 import authReducer from './store/reducers/auth';
+import axios from './axios-orders'
 
 import thunk from "redux-thunk";
+import withErrorHandler from "./hoc/withErrorHandler/withErrorHandler";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose();
 
